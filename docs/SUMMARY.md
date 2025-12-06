@@ -43,7 +43,7 @@ Provide step-by-step guidance for replacing the built-in camera in RunCam WiFiLi
 - File locations reference table
 - GPIO configuration example
 
-### 3. Practical Integration Example
+### 3. Practical Integration Example: IMX415
 **File:** `docs/EXAMPLE_IMX415_INTEGRATION.md` (465 lines)
 
 **Demonstrates:**
@@ -57,12 +57,29 @@ Provide step-by-step guidance for replacing the built-in camera in RunCam WiFiLi
 - Complete boot sequence
 - Verification checklist (12 items)
 
-### 4. Updated Main README
+### 4. Practical Integration Example: TC358743 HDMI to MIPI
+**File:** `docs/EXAMPLE_TC358743_HDMI_TO_MIPI.md` (NEW - 18460 characters)
+
+**Demonstrates:**
+- Using HDMI to MIPI CSI-2 bridge (TC358743XBG chip)
+- Convert any HDMI source to MIPI input
+- Platform-specific integration for Novatek and SigmaStar
+- Complete hardware pinout and connections
+- I2C register configuration
+- Device tree integration for V4L2 driver
+- GPIO initialization and reset sequences
+- HDMI signal detection and resolution auto-detection
+- Audio extraction from HDMI
+- Use cases: HDMI cameras, computers, game consoles
+- Bill of Materials (BOM)
+- Advanced features: EDID programming, multi-format support
+
+### 5. Updated Main README
 **File:** `README.md`
 
 **Added:**
 - New "Documentation" section
-- Links to all three guides
+- Links to all four guides
 - Positioned between project info and support sections
 
 ## Key Technical Details Documented

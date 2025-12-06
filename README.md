@@ -22,7 +22,8 @@ and on the [wiki][wiki].
 
 - **[MIPI Camera Replacement Guide](docs/MIPI_CAMERA_REPLACEMENT_GUIDE.md)** - Comprehensive guide for replacing built-in cameras with alternative MIPI video sources (e.g., RunCam WiFiLink2)
 - **[Quick Reference](docs/MIPI_QUICK_REFERENCE.md)** - Quick reference for MIPI sensor integration
-- **[Integration Example](docs/EXAMPLE_IMX415_INTEGRATION.md)** - Step-by-step example of adding IMX415 sensor support
+- **[Integration Example: IMX415](docs/EXAMPLE_IMX415_INTEGRATION.md)** - Step-by-step example of adding IMX415 sensor support
+- **[Integration Example: TC358743 HDMI to MIPI](docs/EXAMPLE_TC358743_HDMI_TO_MIPI.md)** - Using HDMI to MIPI CSI-2 adapter (TC358743XBG chip)
 
 ## Support
 

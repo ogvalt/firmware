@@ -20,6 +20,7 @@
 | SC3335 | SmartSens | 3MP | MIPI |
 | SC2239 | SmartSens | 2MP | MIPI/Parallel |
 | SC2335 | SmartSens | 2MP | MIPI/Parallel |
+| **TC358743** | **HDMI Bridge** | **1080p** | **HDMI→MIPI** |
 
 ## Essential Commands
 
@@ -185,6 +186,8 @@ Make executable: `chmod +x /etc/init.d/S36sensor-gpio`
 ## Resources
 
 - **Full Guide:** [MIPI_CAMERA_REPLACEMENT_GUIDE.md](MIPI_CAMERA_REPLACEMENT_GUIDE.md)
+- **IMX415 Example:** [EXAMPLE_IMX415_INTEGRATION.md](EXAMPLE_IMX415_INTEGRATION.md)
+- **TC358743 HDMI to MIPI:** [EXAMPLE_TC358743_HDMI_TO_MIPI.md](EXAMPLE_TC358743_HDMI_TO_MIPI.md)
 - **Wiki:** https://github.com/openipc/wiki
 - **Firmware:** https://github.com/openipc/firmware
 - **Sensors:** https://github.com/openipc/sensors

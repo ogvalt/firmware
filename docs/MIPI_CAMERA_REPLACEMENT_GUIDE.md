@@ -25,6 +25,15 @@ The SigmaStar Infinity6 platform currently supports the following MIPI sensors:
 
 Additional sensors may be available in the [OpenIPC sensors repository](https://github.com/openipc/sensors).
 
+### Alternative: HDMI to MIPI Adapters
+
+You can also use **HDMI to MIPI CSI-2 bridge chips** to convert HDMI video sources:
+
+- **Toshiba TC358743XBG** - HDMI 1.4 to MIPI CSI-2 bridge (up to 1080p60)
+- **Toshiba TC358840XBG** - HDMI 2.0 to MIPI CSI-2 bridge (up to 4K30)
+
+This allows using any HDMI source (cameras, computers, game consoles) as input. See the [TC358743 Integration Example](EXAMPLE_TC358743_HDMI_TO_MIPI.md) for detailed instructions.
+
 ## Architecture Overview
 
 The camera sensor integration in OpenIPC consists of several layers:

@@ -58,7 +58,7 @@ Provide step-by-step guidance for replacing the built-in camera in RunCam WiFiLi
 - Verification checklist (12 items)
 
 ### 4. Practical Integration Example: TC358743 HDMI to MIPI
-**File:** `docs/EXAMPLE_TC358743_HDMI_TO_MIPI.md` (NEW - 18460 characters)
+**File:** `docs/EXAMPLE_TC358743_HDMI_TO_MIPI.md` (732 lines)
 
 **Demonstrates:**
 - Using HDMI to MIPI CSI-2 bridge (TC358743XBG chip)

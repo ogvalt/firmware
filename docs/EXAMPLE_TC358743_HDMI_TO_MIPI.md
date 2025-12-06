@@ -305,9 +305,9 @@ case "$1" in
         
         # Reset sequence
         echo 0 > /sys/class/gpio/gpio60/value
-        usleep 50000  # 50ms reset pulse
+        usleep 50000  # 50ms reset pulse (TC358743 min: 1ms)
         echo 1 > /sys/class/gpio/gpio60/value
-        usleep 100000  # 100ms startup time
+        usleep 100000  # 100ms startup time (TC358743 typical: 50-100ms)
         
         echo "TC358743 initialized"
         ;;
@@ -348,9 +348,9 @@ i2cset -y 1 0x0f 0x8520 0x0001 w  # HDMI PHY enable
 i2cset -y 1 0x0f 0x8521 0x0000 w  # Auto input detection
 
 # MIPI CSI-2 configuration
-i2cset -y 1 0x0f 0x0140 0x0004 w  # 2-lane mode
-i2cset -y 1 0x0f 0x0144 0x0000 w  # Continuous clock
-i2cset -y 1 0x0f 0x0148 0x0001 w  # Enable CSI output
+i2cset -y 1 0x0f 0x0140 0x0004 w  # 2-lane mode (0x0004 = lanes 0,1 enabled)
+i2cset -y 1 0x0f 0x0144 0x0000 w  # Continuous clock mode
+i2cset -y 1 0x0f 0x0148 0x0001 w  # Enable CSI TX output
 
 # Video format (1080p60)
 i2cset -y 1 0x0f 0x0006 0x0040 w  # FIFO level
@@ -580,10 +580,10 @@ detect_format() {
     
     # Configure based on detection
     if [ "$h_active" = "0x0780" ] && [ "$v_active" = "0x0438" ]; then
-        echo "1920x1080 detected"
+        echo "1920x1080 detected"  # 0x0780 = 1920, 0x0438 = 1080
         # Configure for 1080p
     elif [ "$h_active" = "0x0500" ] && [ "$v_active" = "0x02D0" ]; then
-        echo "1280x720 detected"
+        echo "1280x720 detected"  # 0x0500 = 1280, 0x02D0 = 720
         # Configure for 720p
     fi
 }
